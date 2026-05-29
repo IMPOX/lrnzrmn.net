@@ -1,0 +1,439 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* FINE DEL RESET */
+
+/* VARIABILI */
+
+:root {
+    --nero: #121314;
+    --bianco: #ffffff;
+    --grigio: #cfcfcf;
+    --grigio-hover: #9f9f9f;
+}
+
+@font-face {
+    font-family: Manrope;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(../font/manrope-latin-400-normal.woff2) format(woff2);
+}
+
+@font-face {
+    font-family: Manrope;
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url(../font/manrope-latin-600-normal.woff2) format(woff2);
+}
+
+em {
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bianco);
+}
+
+h1, h2, h3, p, a {
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    color: var(--nero);
+}
+
+h1 {
+    font-size: 2.25em; /* 36px */
+    font-weight: 400;
+    line-height: 1.2;
+    padding: 24px;
+}
+
+h1 b {
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.875em; /* 30px */
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 1.5em; /* 24px */
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+p b {
+    font-weight: 600;
+}
+
+a {
+    font-weight: 600;
+    color: var(--nero);
+    text-decoration: none;
+}
+
+hr {
+    width: 10em; /* 160px */
+    border: none;
+    border-bottom: 1px solid #cfcfcf;
+    margin: 0;
+}
+
+/* ------------------------------------------------------ MOBILE */
+
+/* ----- HEADER  */
+
+.header-main {
+    width: 100%;
+    height: auto;
+    padding-top: 24px;
+    position: fixed;
+    z-index: 1;
+
+}
+
+.navbar-container {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.navbar-main {
+    width: auto;
+    display: flex;
+    border-radius: 50px;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 5px;
+    backdrop-filter: blur(10px);
+    padding: 5px;
+    border: 1px solid var(--grigio);
+}
+
+.navbar-navlink {
+    border-radius: 50px;
+    flex-shrink: 1;
+    padding: 0.6em 0.8em;
+    border: 1px solid var(--grigio-hover);
+}
+
+.navbar-navlink a {
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    font-style: normal;
+    letter-spacing: -0.01em;
+    color: var(--bianco);
+    text-decoration: none;
+}
+
+.navbar-navlink-a:hover {
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-style: normal;
+    color: #4c6763;
+    text-decoration: none;
+}
+
+/* ----- HERO  */
+
+.hero {
+    width: auto;
+    height: 600px;
+    background-image: url(../img/placeholder-1600x900.gif);
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+/* ----- MAIN CONTAINER */
+
+.main-container {
+    width: auto;
+    height: auto;
+}
+
+/* ----- MAIN COLUMN  */
+
+.main-column {
+    width: auto;
+    height: auto;
+}
+
+/* ----- PARAGRAFO STANDARD  */
+
+.p-standard {
+    width: auto;
+    height: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5em; /* 24px */
+}
+
+/* ----- CHANGELOG  */
+
+.box-changelog {
+    width: auto;
+    height: auto;
+    padding: 24px;
+    background-color: var(--nero);
+    border-radius: 4px;
+}
+
+.box-changelog h2 {
+    color: var(--bianco);
+}
+
+.box-changelog p {
+    color: var(--bianco);
+}
+
+/* ----- CONTAINER CON HEAD, PARAGRAFO E IMMAGINI LUNGHI */
+
+.container-img-long {
+    width: auto;
+    height: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.box-img-long {
+    width: 100%;
+    height: 120px;
+    box-shadow: 0px 0px 10px var(--grigio);
+    display: flex;
+    flex-direction: row;
+}
+
+.box-img-long .image-long {
+    width: 33%;
+    background-image: url(../img/placeholder-1600x900.gif);
+    background-size: cover;
+    background-position: center;
+}
+
+.box-img-long .paragraph-long {
+    width: 67%;
+    height: auto;
+    padding: 12px 24px;
+    align-self: center;
+}
+
+/* ----- CONTAINER CON HEAD, PARAGRAFO E IMMAGINI CORTI (2 IN RIGA) */
+
+.container-img-short {
+    width: auto;
+    height: auto;
+    padding: 24px;
+}
+
+.cont-box-short {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.box-img-short {
+    width: 100%;
+    height: 120px;
+    box-shadow: 0px 0px 10px var(--grigio);
+    display: flex;
+    flex-direction: row;
+}
+
+.box-img-short .image-short {
+    width: 33%;
+    background-image: url(../img/placeholder-1600x900.gif);
+    background-size: cover;
+    background-position: center;
+}
+
+.box-img-short .paragraph-short {
+    width: 67%;
+    height: auto;
+    padding: 12px 24px;
+    align-self: center;
+}
+
+/* ----- P LINKS  */
+
+.p-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+/* ----- STAMP BOX  */
+
+.stamp-box {
+    width: auto;
+    height: auto;
+    padding: 24px 24px 48px 24px;
+    display: flex;
+    flex-direction: row;
+    row-gap: 24px;
+    column-gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ----- FOOTER  */
+
+footer {
+    width: auto;
+    height: auto;
+    padding: 24px;
+    background-color: var(--nero);
+}
+
+footer .footer-text {
+    width: auto;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    row-gap: 24px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} 
+
+footer .footer-text p {
+    color: var(--bianco);
+}
+
+footer .footer-text a {
+    color: var(--bianco);
+}
+
+/* ------------------------------------------------------ DESKTOP */
+@media only screen and (min-width: 768px) {
+
+    /* ----- HERO  */
+
+    .hero {
+    width: 100%;
+    height: 800px;
+    }
+
+    /* ----- MAIN CONTAINER */
+
+    .main-container {
+    width: auto;
+    max-width: calc(1000px + 300px + 300px);
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: flex-start;
+    }
+
+    /* ----- SIDEBAR  */
+
+    .sidebar {
+    width: 300px;
+    padding: 24px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    }
+
+    .sidebar p {
+    color: var(--grigio-hover);
+    }
+
+    /* ----- MAIN COLUMN  */
+
+    .main-column {
+    max-width: 1000px;
+    border-left: 1px solid var(--grigio);
+    margin-right: 300px;
+    }
+
+    /* ----- CONTAINER CON HEAD, PARAGRAFO E IMMAGINI CORTI (2 IN RIGA) */
+
+    .cont-box-short {
+    flex-direction: row;
+    }
+
+    .box-img-short {
+    width: calc((100% - 24px) / 2);
+    }
+    
+    /* ----- FOOTER  */
+
+    footer .footer-text {
+    width: 1000px;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    
+    } 
+
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
