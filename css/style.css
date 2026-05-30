@@ -82,14 +82,14 @@ body {
     background-color: var(--bianco);
 }
 
-h1, h2, h3, p, a {
+h1, h2, h3, p, a, li {
     font-family: "Manrope", Arial, Helvetica, sans-serif;
     color: var(--nero);
 }
 
 h1 {
     font-size: 2.25em; /* 36px */
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.2;
     padding: 24px;
 }
@@ -134,6 +134,15 @@ hr {
     margin: 0;
 }
 
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+li {
+    line-height: 1.5;
+}
+
 /* ------------------------------------------------------ MOBILE */
 
 /* ----- HEADER  */
@@ -162,6 +171,7 @@ hr {
     padding: 4px;
     border: 1px solid var(--grigio);
     background-color: var(--bianco);
+    list-style-type: none;
 }
 
 .navbar-navlink {
@@ -216,6 +226,7 @@ hr {
 .main-column {
     width: auto;
     height: auto;
+    padding-bottom: 24px;
 }
 
 /* ----- PARAGRAFO STANDARD  */
@@ -334,7 +345,7 @@ hr {
 .stamp-box {
     width: auto;
     height: auto;
-    padding: 24px 24px 48px 24px;
+    padding: 24px;
     display: flex;
     flex-direction: row;
     row-gap: 24px;
@@ -400,11 +411,15 @@ footer .footer-text a {
     text-align: right;
     display: flex;
     flex-direction: column;
-    row-gap: 24px;
+    row-gap: 8px;
     }
 
     .sidebar p {
     color: var(--grigio-hover);
+    }
+
+    .sidebar p a {
+        color: var(--grigio-hover);
     }
 
     /* ----- MAIN COLUMN  */
