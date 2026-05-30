@@ -80,6 +80,8 @@ em {
 
 body {
     background-color: var(--bianco);
+    background-image: radial-gradient(var(--grigio) 0.5px, var(--bianco) 0.5px);
+    background-size: 10px 10px;
 }
 
 h1, h2, h3, p, a, li {
@@ -91,7 +93,6 @@ h1 {
     font-size: 2.25em; /* 36px */
     font-weight: 600;
     line-height: 1.2;
-    padding: 24px;
 }
 
 h1 b {
@@ -145,40 +146,42 @@ li {
 
 /* ------------------------------------------------------ MOBILE */
 
+/* ----- LOGOTIPO  */
+
+.logotipo {
+    width: auto;
+    height: 24px;
+}
+
 /* ----- HEADER  */
 
 .header-main {
     width: 100%;
     height: auto;
-    padding-top: 24px;
-    position: fixed;
-    z-index: 1;
-
 }
 
 .navbar-container {
-    width: fit-content;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
+    padding: 24px;
 }
 
 .navbar-main {
-    width: auto;
+    width: 75%;
     display: flex;
-    border-radius: 4px;
     flex-direction: row;
-    justify-content: center;
-    column-gap: 4px;
-    padding: 4px;
-    border: 1px solid var(--grigio);
-    background-color: var(--bianco);
+    justify-content: space-between;
+    flex-wrap: wrap;
     list-style-type: none;
 }
 
 .navbar-navlink {
-    border-radius: 4px;
     flex-shrink: 1;
-    padding: 0.6em 0.8em;
-    border: 1px solid var(--grigio);
+    padding: 0 4px;
 }
 
 .navbar-navlink a {
@@ -189,10 +192,6 @@ li {
     letter-spacing: -0.01em;
     color: var(--grigio-hover);
     text-decoration: none;
-}
-
-.navbar-navlink:hover {
-    background-color: var(--bianco);
 }
 
 .navbar-navlink a:hover {
@@ -266,6 +265,7 @@ li {
     box-shadow: 0px 0px 10px var(--grigio);
     display: flex;
     flex-direction: row;
+    background-color: var(--bianco);
 }
 
 .box-img-long .image-long {
@@ -299,6 +299,7 @@ li {
     box-shadow: 0px 0px 10px var(--grigio);
     display: flex;
     flex-direction: row;
+    background-color: var(--bianco);
 }
 
 .box-img-short .image-short {
@@ -395,6 +396,17 @@ footer .footer-text a {
 
 /* ------------------------------------------------------ DESKTOP */
 @media only screen and (min-width: 768px) {
+
+    /* ----- HEADER  */
+
+    .navbar-container {
+        max-width: 1000px;
+        justify-content: space-between;
+    }
+
+    .navbar-main {
+    width: auto;
+    }
 
     /* ----- HERO  */
 
