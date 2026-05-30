@@ -260,15 +260,6 @@ li {
 
 /* ----- CONTAINER CON HEAD, PARAGRAFO E IMMAGINI LUNGHI */
 
-.container-img-long {
-    width: auto;
-    height: auto;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-}
-
 .box-img-long {
     width: 100%;
     height: 120px;
@@ -292,12 +283,6 @@ li {
 }
 
 /* ----- CONTAINER CON HEAD, PARAGRAFO E IMMAGINI CORTI (2 IN RIGA) */
-
-.container-img-short {
-    width: auto;
-    height: auto;
-    padding: 24px;
-}
 
 .cont-box-short {
     width: auto;
@@ -351,6 +336,33 @@ li {
     row-gap: 24px;
     column-gap: 12px;
     flex-wrap: wrap;
+}
+
+/* ----- BANNER IMMAGINE LARGE 1 RESPONSIVE */
+
+.image-large-1 {
+    padding: 24px;
+}
+
+.image-large-1 img {
+    width: 100%;
+    height: auto;
+}
+
+/* ---- BANNER IMMAGINI LARGE 2 RESPONSIVE */
+
+.image-large-2 {
+    width: auto;
+    height: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.image-large-2 img {
+    width: 100%;
+    height: auto;
 }
 
 /* ----- FOOTER  */
@@ -440,6 +452,19 @@ footer .footer-text a {
     width: calc((100% - 24px) / 2);
     }
     
+    /* ---- BANNER IMMAGINI LARGE 2 RESPONSIVE */
+
+    .image-large-2 {
+    flex-direction: row;
+    column-gap: 24px;
+    flex-wrap: wrap;
+    }
+
+    .image-large-2 img {
+    width: calc((100% - 24px) / 2);
+    height: auto;
+    }
+
     /* ----- FOOTER  */
 
     footer .footer-text {
